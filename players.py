@@ -23,6 +23,10 @@ class Player:
         
         self.experience += self.add_exp
         print('Текущий опыт ', self.experience)
+
+        while self.level < len(levels) and self.experience >= levels[self.level]:
+            self.level += 1
+        print('Уровень повышен! Текущий уровень ' ,self.level)
     
 
     def __del__(self):
